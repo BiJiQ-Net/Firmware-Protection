@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Code for Firmware-Protection</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+<h1>Registration Code Hash </h1>
+<label for="macInput">Enter MAC Address (i.e., A1B2C3D4E5F6)</label><br>
+<input type="text" id="textInput" placeholder="Enter text to hash">
+<button onclick="computeCustomMD5()">Compute Hash</button>
+<p id="result"></p>
+
+<script>
+function computeCustomMD5() {
+// Get the input value
+var input = document.getElementById('textInput').value;
+
+// Concatenate the input three times
+var concatenatedInput = "SALTYFISH" + input;
+
+// Perform MD5 hash twice
+var firstHash = CryptoJS.MD5(concatenatedInput).toString();
+var finalHash = CryptoJS.MD5(firstHash).toString();
+
+// Display the result
+document.getElementById('result').textContent = 'Registration Code: ' + finalHash;
+}
+</script>
+</body>
+</html>
