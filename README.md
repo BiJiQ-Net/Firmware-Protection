@@ -2,7 +2,7 @@
 
 This project provides a simple registration mechanism for ESP32/BW16 devices using the device's **MAC address** and **MD5 hashing**. It prevents unauthorized use by verifying a unique hash on boot. If the hash does not match, the user is prompted to enter a registration code via Serial Monitor.
 
-This code will protect your firmware from device cloning.
+This code will protect your firmware from cloning.
 
 ---
 ## 🧰 How to Use the Code
