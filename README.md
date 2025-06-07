@@ -1,6 +1,8 @@
 # Firmware-Protection with MAC-Based Registration
 
-This project provides a simple registration mechanism for ESP32/ESP8266 devices using the device's **MAC address** and **MD5 hashing**. It prevents unauthorized use by verifying a unique hash on boot. If the hash does not match, the user is prompted to enter a registration code via Serial Monitor.
+This project provides a simple registration mechanism for ESP32/BW16 devices using the device's **MAC address** and **MD5 hashing**. It prevents unauthorized use by verifying a unique hash on boot. If the hash does not match, the user is prompted to enter a registration code via Serial Monitor.
+
+This code will protect your firmware from device cloning.
 
 ---
 ## 🧰 How to Use the Code
@@ -101,6 +103,5 @@ print("Registration Code:", reg_code)
 ## 📜 License
 
 This project is provided under the MIT License. Modify and use freely.
-
 
 ---
